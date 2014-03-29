@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="com.lefortsoftware.ttsplugin"
+    version="0.1.0">
+    <name>TtsPlugin</name>   
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="TtsPlugin">
+                <param name="ios-package" value="TtsPlugin" /> 
+            </feature>
+        </config-file>
+        <js-module src="www/TtsPlugin.js" name="TtsPlugin">
+            <clobbers target="ttsPlugin" />
+        </js-module>
+        <header-file src="src/ios/TtsPlugin.h" />
+	    <source-file src="src/ios/TtsPlugin.m" />
+        <framework src="AVFoundation.framework" />
+        <framework src="Foundation.framework" />
+    </platform>
+</plugin>
