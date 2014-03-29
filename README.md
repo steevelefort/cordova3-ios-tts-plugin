@@ -10,9 +10,9 @@ In your Cordova project directory :
 cordova plugin add https://github.com/steevelefort/cordova3-ios-tts-plugin
 
 Verify if you config.xml file contains :
-<feature name="TtsPlugin">
-        <param name="ios-package" value="TtsPlugin" />
-</feature>
+&lt;feature name="TtsPlugin"&gt;
+        $lt;param name="ios-package" value="TtsPlugin" /&gt;
+&lt;/feature&gt;
 
 ##USE IT
 
