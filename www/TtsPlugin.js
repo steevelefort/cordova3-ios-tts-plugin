@@ -4,10 +4,12 @@ var exec = require('cordova/exec');
  */
 function TtsPlugin() {}
 
-TtsPlugin.prototype.initTTS = function() {
+TtsPlugin.prototype.initTTS = function(successCallBack, failCallBack) {
     exec(function(result){
+            successCallBack();
         },
         function(error){
+            failCallBack();
         },
         "TtsPlugin",
         "initTTS",
