@@ -17,6 +17,10 @@ Verify if you config.xml file contains :
 
 ##USE IT
 
+ttsPlugin.setRate(rate); // Set voice speed : default is "0.2"
+
+ttsPlugin.setLanguage(lang); // Set voice language : default is "en-US"
+
 ttsPlugin.initTTS(successCallBack, failCallBack); // Init Plugin : failCallBack doesn't work yet
 
 ttsPlugin.speak("Hello"); // Say Hello

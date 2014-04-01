@@ -4,6 +4,8 @@
 @interface TtsPlugin : CDVPlugin
 
 - (void)initTTS:(CDVInvokedUrlCommand*)command;
+- (void)setRate:(CDVInvokedUrlCommand*)command;
+- (void)setLanguage:(CDVInvokedUrlCommand*)command;
 - (void)speak:(CDVInvokedUrlCommand*)command;
 
 @end

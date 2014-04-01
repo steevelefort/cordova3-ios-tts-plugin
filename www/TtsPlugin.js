@@ -17,6 +17,29 @@ TtsPlugin.prototype.initTTS = function(successCallBack, failCallBack) {
     );
 }
 
+TtsPlugin.prototype.setLanguage = function(lang) {
+    exec(function(result){
+        },
+        function(error){
+        },
+        "TtsPlugin",
+        "setLanguage",
+        [lang]
+    );
+}
+
+TtsPlugin.prototype.setRate = function(rate) {
+    exec(function(result){
+        },
+        function(error){
+        },
+        "TtsPlugin",
+        "setRate",
+        [rate]
+    );
+}
+
+
 TtsPlugin.prototype.speak = function(text) {
     exec(function(result){
         },
