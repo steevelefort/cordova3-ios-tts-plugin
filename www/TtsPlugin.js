@@ -51,6 +51,16 @@ TtsPlugin.prototype.speak = function(text) {
     );
 }
 
+TtsPlugin.prototype.stopSpeaking = function() {
+    exec(function(result){
+        },
+        function(error){
+        },
+        "TtsPlugin",
+        "stopSpeaking",
+        []
+    );
+}
 
 var ttsPlugin = new TtsPlugin();
 module.exports = ttsPlugin

@@ -42,4 +42,12 @@ double rate = .2;
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)stop:(CDVInvokedUrlCommand*)command{
+    [synth stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    [synth stopSpeakingAtBoundary:AVSpeechBoundaryWord];
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+
 @end
