@@ -19,4 +19,28 @@
         <framework src="AVFoundation.framework" />
         <framework src="Foundation.framework" />
     </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.lefortsoftware.ttsplugin"
+                      android:label="@string/app_name">
+                <intent-filter></intent-filter>
+            </activity>
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="widget">
+            <feature name="TtsPlugin">
+                <param name="android-package" value="com.lefortsoftware.ttsplugin.TtsPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/com/lefortsoftware/TtsPlugin.java"
+                     target-dir="src/com/lefortsoftware"/>
+
+        <js-module src="www/TtsPlugin.js" name="TtsPlugin">
+            <clobbers target="ttsPlugin" />
+        </js-module>
+
+    </platform>
 </plugin>
