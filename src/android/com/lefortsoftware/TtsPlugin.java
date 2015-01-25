@@ -48,7 +48,6 @@
 
         if(action.equals("speak")){
         String txt = args.getString(0);
-        tts.setLanguage(Locale.FRANCE);
         tts.speak(txt, TextToSpeech.QUEUE_ADD, null);
         callbackContext.success("OK");
         return true;
@@ -61,6 +60,8 @@
         }
 
         if(action.equals("setLanguage")){
+        String language = args.getString(0);
+		tts.setLanguage(new Locale(language));
         callbackContext.success("OK");
         return true;
         }
